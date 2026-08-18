@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && npm run copy:icons",
-    "copy:icons": "cp nodes/OneSend/onesend.svg dist/nodes/OneSend/onesend.svg",
+    "copy:icons": "node -e \"require('fs').mkdirSync('dist/nodes/OneSend',{recursive:true});require('fs').copyFileSync('nodes/OneSend/onesend.svg','dist/nodes/OneSend/onesend.svg')\"",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
