@@ -1,0 +1,44 @@
+{
+  "name": "n8n-nodes-onesend",
+  "version": "0.1.0",
+  "description": "n8n community node for onesend — EU-sovereign transactional email delivery.",
+  "keywords": ["n8n-community-node-package", "n8n", "onesend", "email", "transactional", "smtp", "eu"],
+  "license": "MIT",
+  "homepage": "https://onesend.eu",
+  "author": {
+    "name": "WOCOO Management and Consulting GmbH",
+    "email": "supporters@wocoo.tv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onesend-eu/n8n-nodes-onesend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/onesend-eu/n8n-nodes-onesend/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy:icons",
+    "copy:icons": "cp nodes/OneSend/onesend.svg dist/nodes/OneSend/onesend.svg",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/OneSendApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/OneSend/OneSend.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "n8n-workflow": "*",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
