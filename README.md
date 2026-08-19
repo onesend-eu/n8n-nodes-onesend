@@ -1,6 +1,6 @@
 # n8n-nodes-onesend
 
-An n8n community node for **onesend** — EU-sovereign transactional email delivery.
+An n8n community node for **onesend** - EU-sovereign transactional email delivery.
 
 ## Install (private, on your own n8n)
 
